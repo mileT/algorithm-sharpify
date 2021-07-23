@@ -1,0 +1,1 @@
+(self.webpackChunkleetcode_notes_doc=self.webpackChunkleetcode_notes_doc||[]).push([[1792],{9623:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/algorithm-sharpify/blog/tags","slug":"hello","name":"hello","count":2,"permalink":"/algorithm-sharpify/blog/tags/hello"}')}}]);
