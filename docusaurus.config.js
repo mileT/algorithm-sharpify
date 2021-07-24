@@ -1,14 +1,14 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Algorithm Sharpify',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  tagline: 'Sharp Algorithm/Coding skills and more',
+  url: 'https://milet.github.io/', // this is updated by mileT
+  baseUrl: '/algorithm-sharpify/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'mileT', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'algorithm-sharpify', // Usually your repo name.
   themeConfig: {
     prism: {
       additionalLanguages: ['powershell', 'java','python', 'cpp'],
