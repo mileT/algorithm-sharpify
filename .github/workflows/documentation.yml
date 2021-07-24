@@ -36,7 +36,7 @@ jobs:
       - name: Release to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_USER: git
+          GIT_USER: miltT
         run: |
           git config --global user.email "jianan.h@gmail.com"
           git config --global user.name "mileT"
