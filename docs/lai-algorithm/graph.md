@@ -1,12 +1,19 @@
 ---
-sidebar_label: "Recursion 1"
-sidebar_position: 2
+sidebar_label: "graph"
+sidebar_position: 5
 ---
 1. 表象上：
-2. 实质上：
-3. 实现层面：
-1. base case:
-2. Rescursive rule:
+2. Graph Search Algorithm BFS
+# BFS 1
+BFS1, use queue,  expand & generate
+
+# BFS 2
+ 1. Initial state start node
+ 2. Node expansion/Generation rule
+ 3. Termination condition ( p_queue empty)
+ 4. de-duplicate if needed 
+
+## Q1, 
 
 ```java
 public int a_pow_b(int a, int b) {

@@ -1,9 +1,9 @@
 ---
-sidebar_label: "33. Search in Rotated Sorted Array"
-sidebar_position: 10
+sidebar_label: "39. Combination Sum"
+sidebar_position: 11
 ---
 
-# 33. Search in Rotated Sorted Array
+# 39. Combination Sum
 
 There is an integer array `nums` sorted in ascending order (with distinct values).
 
@@ -43,33 +43,26 @@ __Constrains:__
 ### Java
 ```java
 class Solution {
-    public int search(int[] nums, int target) {
-        int start = 0;
-        int end = nums.length - 1;
-        while(start <= end) {
-            int mid = start + (end - start) / 2;
-            if(nums[mid] == target) {
-                return mid;
-            }
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> current = new ArrayList<Integer>();
+        dfs(candidates, target, 0, result, current);
+        return result;
+    }
 
-            if(nums[start] <= nums[mid]) {
-                if(target >= nums[start] && target < nums[mid]) {
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
-                }
-
-            }
-
-            if(nums[mid] <= nums[end]) {
-                if(target > nums[mid] && target <= nums[end]) {
-                    start = mid + 1;
-                } else {
-                    end = mid - 1;
-                }
-            }
+    private void dfs(int[] nums, int target, int start, List<List<Integer>> result, List<Integer> currentList) {
+        if(target == 0) {
+            result.add(new ArrayList<>(currentList));
+            return;
         }
-        return -1;
+        for(int i = start; i < nums.length; i++) {
+            if(target - nums[i] < 0) {
+                continue;
+            }
+            currentList.add(nums[i]);
+            dfs(nums, target - nums[i], i, result, currentList);
+            currentList.remove(currentList.size() - 1);
+        }
     }
 
 }

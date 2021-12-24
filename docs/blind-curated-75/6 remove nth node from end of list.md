@@ -1,36 +1,66 @@
 ---
-sidebar_label: "1. Two Sum"
-sidebar_position: 1
+sidebar_label: "19. Remove Nth Node From End of List"
+sidebar_position: 6
 ---
 
-# Docusaurus Tutorial Intro
+19. Remove Nth Node From End of List
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Given the `head` of a linked list, remove the `nth` node from the end of the list and return its head
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
+__Example 1:__
 ```shell
-npx @docusaurus/init@latest init my-website classic
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
 ```
 
-## Start your site
-
-Run the development server:
-
+__Example 2:__
 ```shell
-cd my-website
-
-npx docusaurus start
+Input: head = [1], n = 1
+Output: []
 ```
 
-Your site starts at `http://localhost:3000`.
+**Example 3:**
+```shell
+Input: head = [1,2], n = 1
+Output: [1]
+```
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+__Constrains:__
++ The number of nodes in the list is sz
++ `1 <= sz <= 30`
++ `0 <= Node.val <= 100`
++ `1 <= n <= sz`
+
+## Solution
+### Java
+```java
+public class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) {
+        this.val = val;
+    }
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dumyHead = new ListNode();
+        dumyHead.next = head;
+        ListNode fast = dumyHead, slow = dumyHead;
+        while(n > 0) {
+            fast = fast.next;
+            n--;
+        }
+        while(fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+        return dumyHead.next;
+    }
+}
+```

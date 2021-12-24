@@ -16,7 +16,7 @@ module.exports = {
     navbar: {
       title: 'Algorithm Sharpify',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Altorithm',
         src: 'img/logo.svg',
       },
       items: [

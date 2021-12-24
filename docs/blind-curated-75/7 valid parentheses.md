@@ -1,36 +1,63 @@
 ---
-sidebar_label: "1. Two Sum"
-sidebar_position: 1
+sidebar_label: "20. Valid Parentheses"
+sidebar_position: 7
 ---
 
-# Docusaurus Tutorial Intro
+20. Valid Parentheses
+Given a string s containing just the characters `'(', ')', '{', '}', '[' and ']'`, determine if the input string is valid.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+An input string is valid if:
 
-## Getting Started
+1. Open brackets must be closed by the same type of brackets.
+2. Open brackets must be closed in the correct order.
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
+__Example 1:__
 ```shell
-npx @docusaurus/init@latest init my-website classic
+Input: s = "()"
+Output: true
 ```
 
-## Start your site
-
-Run the development server:
-
+__Example 2:__
 ```shell
-cd my-website
-
-npx docusaurus start
+Input: s = "()[]{}"
+Output: true
 ```
 
-Your site starts at `http://localhost:3000`.
+**Example 3:**
+```shell
+Input: s = "([)]"
+Output: false
+```
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+__Constrains:__
+
++ `1 <= s.length <= 104`
++ `s` consists of parentheses only `'()[]{}'`
+
+
+## Solution
+### Java
+```java
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> myStack = new Stack<>();
+        for(Character c: s.toCharArray()) {
+            if("({[".constains(String.valueOf(c))) {
+                myStack.push(c);
+            } else {
+                if(!myStack.isEmpty() && checkChars(myStack.peek(), c)) {
+                    myStack.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        return myStack.isEmpty();
+    }
+    private checkChars(char c1, char c2) {
+        return (c1 == '(' && c2 == ')') || (c1 == '{' && c2 == '}') || (c1 == '[' && c2 == ']');
+    }
+
+
+}
+```
