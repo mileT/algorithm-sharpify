@@ -1,0 +1,18 @@
+---
+slug: coding patterns
+title: interview question
+author: Fahim ul Haq
+author_title: 
+author_url: https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+author_image_url: 
+tags: [interview question, pattern]
+---
+
+## 1. Sliding Window
+The Sliding Window pattern is used to perform a required operation on a specific window size of a given array or linked list, such as finding the longest subarray containing all 1s. Sliding Windows start from the 1st element and keep shifting right by one element and adjust the length of the window according to the problem that you are solving. In some cases, the window size remains constant and in other cases the sizes grows or shrinks.
+
+
+Following are some ways you can identify that the given problem might require a sliding window:
+* The problem input is a linear data structure such as a linked list, array, or string
+* You’re asked to find the longest/shortest substring, subarray, or a desired value
+![sliding window](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FG9YRlqC9joZNTWsi1ul7tRkO6tv1-8i6d3wi0.jpg&w=3840&q=75)
