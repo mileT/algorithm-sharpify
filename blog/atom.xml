@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://milet.github.io/blog</id>
     <title>Algorithm Sharpify Blog</title>
-    <updated>2019-05-30T00:00:00.000Z</updated>
+    <updated>2021-12-27T04:10:10.932Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://milet.github.io/blog"/>
     <subtitle>Algorithm Sharpify Blog</subtitle>
     <icon>https://milet.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[interview question]]></title>
+        <id>coding patterns</id>
+        <link href="https://milet.github.io/algorithm-sharpify/blog/coding patterns"/>
+        <updated>2021-12-27T04:10:10.932Z</updated>
+        <summary type="html"><![CDATA[1. Sliding Window]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>

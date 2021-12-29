@@ -1,0 +1,1 @@
+(self.webpackChunkleetcode_notes_doc=self.webpackChunkleetcode_notes_doc||[]).push([[8923],{7977:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/algorithm-sharpify/blog/tags","slug":"pattern","name":"pattern","count":1,"permalink":"/algorithm-sharpify/blog/tags/pattern"}')}}]);

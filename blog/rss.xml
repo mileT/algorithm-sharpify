@@ -4,9 +4,16 @@
         <title>Algorithm Sharpify Blog</title>
         <link>https://milet.github.io/blog</link>
         <description>Algorithm Sharpify Blog</description>
-        <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Dec 2021 04:10:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[interview question]]></title>
+            <link>https://milet.github.io/algorithm-sharpify/blog/coding patterns</link>
+            <guid>coding patterns</guid>
+            <pubDate>Mon, 27 Dec 2021 04:10:10 GMT</pubDate>
+            <description><![CDATA[1. Sliding Window]]></description>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://milet.github.io/algorithm-sharpify/blog/welcome</link>
