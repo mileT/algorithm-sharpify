@@ -50,7 +50,7 @@ __Constrains:__
 
 ## Solution
 ### BFS
-Version 1
+Version 1 - BFS
 ```java
 
 /**
@@ -138,6 +138,31 @@ public void getLonelyNodes(TreeNode root, boolean isLonely, List<Integer> nodes)
     }
     getLonelyNodes(root.left, root.right == null, nodes);
     getLonelyNodes(root.right, root.left == null, nodes);
+}
+```
+
+Version3 - DFS
+```java
+public List<Integer> getLonelyNodes(TreeNode root) {
+    List<Integer> result = new ArrayList<>();
+    if(root == null) {
+        return result;
+    }
+}
+public void dfs(TreeNode node, List<Integer> res) {
+    if(node.left == null && node.right == null) {
+        return;
+    }
+    if(node.left != null && node.right != null) {
+        dfs(node.left, res);
+        dfs(node.right, res);
+    } else if(node.left != null) {
+        res.add(node.left.val);
+        dfs(node.left, res);
+    } else {
+        res.add(node.right.val);
+        dfs(node.right, res);
+    }
 }
 ```
 
